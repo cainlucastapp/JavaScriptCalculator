@@ -3,7 +3,7 @@
 const history = [];
 
 //Add Result To History
-function addResultsToHistory(number1, operation, number2, result){
+function addToHistory(number1, operation, number2, result){
     history.push(number1 + " " + operation + " " + number2 + " = " + result);
 }
 
@@ -17,7 +17,7 @@ function addition(number1, number2){
 //Subtraction
 function subtraction(number1, number2){
     let result = number1 - number2;
-    addToHistory(number1, '-', number2, result);
+    addResultsToHistory(number1, '-', number2, result);
     return result;
 }
 
@@ -36,5 +36,12 @@ function division(number1, number2){
 }  
    
 
-//Displays the calculation history upon request.
-//A function to display the history or inform the user that they have no stored calculations
+
+//Display History / No Calculations Message
+function displayHistory(){
+        if (history.length === 0) {
+        console.log("No calculations saved yet.");
+    } else {
+        console.log(history);
+    }
+}
