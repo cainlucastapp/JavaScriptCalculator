@@ -40,7 +40,7 @@ function displayHistory(){
         if (history.length === 0) {
         console.log("No calculations saved yet.");
     } else {
-        console.log(history);
+        console.log("Calculation History: " + history);
     }
 }
 
