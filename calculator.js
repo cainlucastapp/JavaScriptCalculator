@@ -4,7 +4,7 @@ const history = [];
 
 //Add Result To History
 function addToHistory(number1, operation, number2, result) {
-    history.push(number1 + " " + operation + " " + number2 + " = " + result);
+    history.push(number1 +  operation + number2 + " = " + result);
 }
 
 //Addition
@@ -78,9 +78,8 @@ console.log("Division Test:", division(20, 4));
 
 
 //Test Division: Divide By Zero
-console.log("Division Test:", division(20, 0)); 
+console.log("Division Test:", division(7, 0)); 
 
 
-//Test Show History / Returns ["5 + 3 = 8", "10 - 4 = 6", "2 * 6 = 12", "20 / 4 = 5"]
+//Test Show History / Returns  5 + 3 = 8, 10 - 4 = 6, 2 * 6 = 12, 20 / 4 = 5, 7 / 0 = Cannot divide by zero.
 console.log(displayHistory());
-
