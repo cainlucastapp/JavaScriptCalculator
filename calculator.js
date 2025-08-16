@@ -1,12 +1,10 @@
 //History Log Array
 const history = [];
 
-
 //Add Result To History
 function addToHistory(number1, operation, number2, result) {
     history.push(number1 +  operation + number2 + " = " + result);
 }
-
 
 //Check Inputs For Numbers And Symbols
 function inputCheck (input) {
@@ -19,7 +17,6 @@ function inputCheck (input) {
     //Input Valid
     return number;
 }
-
 
 //Addition
 function addition(number1, number2) {
@@ -55,7 +52,6 @@ function division(number1, number2) {
     addToHistory(number1, '/', number2, result);
     return result;
 }  
-
 
 //Display History / No Calculations Message
 function displayHistory() {
