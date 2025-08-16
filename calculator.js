@@ -1,4 +1,3 @@
-
 //History Log Array
 const history = [];
 
@@ -68,34 +67,3 @@ function displayHistory() {
         return "Calculation History: " + history.join(", ");
     }
 }
-
-
-//Tests For Instructor To Use
-
-
-//Test No History
-console.log(displayHistory());
-
-
-//Test Addition: 5+3=8
-console.log("Addition Test:", addition(5, 3)); 
-
-
-//Test Subtraction: 10-4=6
-console.log("Subtraction Test:", subtraction(10, 4)); 
-
-
-//Test Multiplication: 2*6=12 
-console.log("Multiplication Test:", multiplication(2, 6)); 
-
-
-//Test Division: 20/4=5 
-console.log("Division Test:", division(20, 4)); 
-
-
-//Test Division: Divide By Zero Error Message
-console.log("Division Test:", division(7, 0)); 
-
-
-//Test Show History / Returns  5 + 3 = 8, 10 - 4 = 6, 2 * 6 = 12, 20 / 4 = 5, 7 / 0 = Cannot divide by zero.
-console.log(displayHistory());
