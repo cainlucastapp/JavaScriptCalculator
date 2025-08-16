@@ -77,7 +77,7 @@ console.log("Multiplication Test:", multiplication(2, 6));
 console.log("Division Test:", division(20, 4)); 
 
 
-//Test Division: Divide By Zero
+//Test Division: Divide By Zero Error Message
 console.log("Division Test:", division(7, 0)); 
 
 
