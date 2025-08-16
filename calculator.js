@@ -2,28 +2,43 @@
 //History Log Array
 const history = [];
 
+
 //Add Result To History
 function addToHistory(number1, operation, number2, result) {
     history.push(number1 +  operation + number2 + " = " + result);
 }
 
+
+//Check Inputs For Numbers And Symbols
+function inputCheck (input) {
+    //Convert Input To Number
+    const number = Number(input);
+    //Invalid Input
+    if (isNaN(number)) {
+        throw "Error: Invalid character used.";
+    }
+    //Input Valid
+    return number;
+}
+
+
 //Addition
 function addition(number1, number2) {
-    let result = number1 + number2;
+    let result = inputCheck(number1) + inputCheck(number2);
     addToHistory(number1, '+', number2, result);
     return result;
 }
 
 //Subtraction
 function subtraction(number1, number2) {
-    let result = number1 - number2;
+    let result = inputCheck(number1) - inputCheck(number2);
     addToHistory(number1, '-', number2, result);
     return result;
 }
 
 //Multiplication
 function multiplication(number1, number2) {
-    let result = number1 * number2;
+    let result = inputCheck(number1) * inputCheck(number2);
     addToHistory(number1, '*', number2, result);
     return result;
 }
@@ -37,10 +52,11 @@ function division(number1, number2) {
         return result;
     }
     //Valid Division
-    let result = number1 / number2;
+    let result = inputCheck(number1) / inputCheck(number2);
     addToHistory(number1, '/', number2, result);
     return result;
 }  
+
 
 //Display History / No Calculations Message
 function displayHistory() {
@@ -54,7 +70,7 @@ function displayHistory() {
 }
 
 
-//Tests Left In For Instructor To Use
+//Tests For Instructor To Use
 
 
 //Test No History
